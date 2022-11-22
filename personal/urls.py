@@ -12,6 +12,7 @@ router.register('api/puestos', PuestosViewSet, 'puestos')
 router.register('api/entidades', EntidadesViewSet, 'entidades')
 router.register('api/direcciones', DireccionesViewSet, 'direcciones')
 router.register('api/directorio', Directorio_TelefonicoViewSet, 'directorio')
+router.register('api/directorio_basic', Directorio_TelefonicoBasicViewSet, 'directorio_basic')
 router.register('api/usuarios', UsuarioViewSet, 'usuarios')
 
 

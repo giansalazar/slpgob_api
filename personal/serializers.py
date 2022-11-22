@@ -22,7 +22,7 @@ class PuestosSerializer(serializers.ModelSerializer):
 class EntidadesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Entidades
-        fields = ('nombre', )
+        fields = ('id','nombre', )
         
 
 class DireccionesSerializer(serializers.ModelSerializer):
@@ -49,8 +49,14 @@ class EmpleadosSerializer(serializers.ModelSerializer):
         
 
 class Directorio_TelefonicoSerializer(serializers.ModelSerializer):
+    empleado = EmpleadosListadoSerializer()
     class Meta:
-        model = Personas
+        model = Directorio_Telefonico
+        fields = ('id','telefono', 'tipo', 'extension', 'empleado', )
+
+class Directorio_TelefonicoBasicSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Directorio_Telefonico
         fields = ('telefono', 'tipo', 'extension', 'empleado', )
 
 

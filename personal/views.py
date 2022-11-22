@@ -55,12 +55,15 @@ class Directorio_TelefonicoViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.AllowAny]
     serializer_class = Directorio_TelefonicoSerializer
 
+class Directorio_TelefonicoBasicViewSet(viewsets.ModelViewSet):
+    queryset = Directorio_Telefonico.objects.all()
+    permission_classes = [permissions.AllowAny]
+    serializer_class = Directorio_TelefonicoBasicSerializer
 
 class UsuarioViewSet(viewsets.ModelViewSet):
     serializer_class = UsuarioSerializer
     queryset = Usuario.objects.all()
-    authentication_classes = (TokenAuthentication, )
-    permission_classes = (UpdateOwnProfile,)
+    permission_classes = [permissions.AllowAny]
 
 
 class UserLoginAPIView(ObtainAuthToken):

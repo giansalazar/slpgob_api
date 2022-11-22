@@ -56,13 +56,13 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
+    
 ]
 
 CORS_ALLOWED_ORIGINS = [
@@ -94,7 +94,7 @@ WSGI_APPLICATION = 'prueba.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(default='postgresql://postgres:postgres@localhost:5432/mysite',
+    'default': dj_database_url.config(default='postgres://slpgob_api_user:gxNy0fpOuJgxTODYMYFjG04HTzCTdfRO@dpg-cdtu5esgqg42p521r0m0-a.oregon-postgres.render.com/slpgob_api',
     conn_max_age=600
     )}
 
