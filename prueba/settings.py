@@ -65,7 +65,7 @@ MIDDLEWARE = [
     
 ]
 
-CORS_ALLOWED_ORIGINS = [all]
+CORS_ALLOWED_ORIGINS = ['*']
 
 ROOT_URLCONF = 'prueba.urls'
 
