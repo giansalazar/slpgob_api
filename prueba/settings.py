@@ -65,8 +65,9 @@ MIDDLEWARE = [
     
 ]
 
-CORS_ALLOWED_ORIGINS = [
+CORS_ORIGIN_WHITELIST = [
     'https://giansalazar.github.io/react-gob',
+    'http://localhost:5173',
 ]
 
 ROOT_URLCONF = 'prueba.urls'
