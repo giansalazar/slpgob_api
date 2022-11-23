@@ -65,7 +65,9 @@ MIDDLEWARE = [
     
 ]
 
-CORS_ALLOW_ALL_ORIGINS: True
+CORS_ALLOWED_ORIGINS = [
+    'https://giansalazar.github.io/react-gob',
+]
 
 ROOT_URLCONF = 'prueba.urls'
 
